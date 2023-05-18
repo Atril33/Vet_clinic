@@ -11,3 +11,7 @@ escape_attempts integer,
 neutered boolean,
 weight_kg decimal
 );
+
+/* Day 2. */
+
+ALTER TABLE animals ADD COLUMN species VARCHAR(255);
