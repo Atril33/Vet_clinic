@@ -150,9 +150,6 @@ Install this project with:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
-> 
 - add more data into the table
 - add more operation like delete, update
 - add join table
