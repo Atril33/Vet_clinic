@@ -54,7 +54,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 Vet Clinic <a name="about-project"></a>
 
-> Vet Clinic is a Animals database.
+> Vet Clinic is an Animals database.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -150,9 +150,6 @@ Install this project with:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
-> 
 - add more data into the table
 - add more operation like delete, update
 - add join table
