@@ -43,12 +43,10 @@ SELECT AVG(escape_attempts) FROM animals WHERE date_of_birth >= '1990-12-31' AND
 SELECT OWNER.* FROM owners OWNER JOIN animals ANIMAL_NAME ON OWNER.owner_id LIKE '%' || ANIMAL_NAME.name || '%' WHERE OWNER.full_name = 'Melody Pond';
 
 
-
-SELECT animals.name FROM animals JOIN species ON species.id = animals.id;
+SELECT animals.name AS animal_name, owners.full_name AS owner_name FROM owners JOIN animals ON animals.id= owners.id;
 SELECT animals.name FROM species INNER JOIN animals ON animals.id = species.id WHERE species_id = 'Pokemon';
 SELECT animals.name, owners.full_name FROM owners INNER JOIN animals ON animals.id = owners.id;
 SELECT animals.species_id, COUNT(animals.id) AS total_animals FROM animals INNER JOIN species ON animals.id = species.id GROUP BY animals.species_id;
 SELECT owners.full_name AS name, animals.name AS Animal_name, animals.species_id AS Animal_species FROM animals JOIN owners ON animals.id = owners.id WHERE species_id = 'Digimon' AND full_name = 'Jennifer Orwell';
 SELECT owners.full_name As name, animals.name AS animal_name FROM animals JOIN owners ON animals.id = owners.id WHERE full_name = 'Dean Winchester ' AND escape_attempts = 0;
-
-SELECT owners.full_name, COUNT(owners.owner_id) AS total_animals FROM owners JOIN animals ON owners.id = animals.id GROUP BY full_name ORDER BY total_animals DESC LIMIT 1; 
+SELECT owners.full_name, COUNT(owners.age) AS total_animals FROM owners JOIN animals ON owners.id = animals.id GROUP BY full_name ORDER BY total_animals DESC LIMIT 1; 
