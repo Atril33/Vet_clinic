@@ -18,3 +18,41 @@ VALUES
    (9, 'Charmander', '2020-02-08', 0, false, -11),
    (10, 'Plantmon', '2021-11-15', 2, true, -5.7),
    (11, 'Squirtle', '1993-04-02', 3, false, -12.13);
+
+/* Day 3. */
+
+INSERT INTO owners(id, full_name, age)
+VALUES
+   (1, 'Sam Smith', 34),
+   (2, 'Jennifer Orwell', 19),
+   (3, 'Bob', 45),
+   (4, 'Melody Pond', 77),
+   (5, 'Dean Winchester', 14),
+   (6, 'Jodie Whittaker', 38);
+
+INSERT INTO species(id, name) 
+VALUES
+   (1, 'Pokemon'),
+   (2, 'Digimon');
+
+ALTER TABLE animals ADD COLUMN species_id VARCHAR(255);
+UPDATE animals SET species_id = 
+CASE
+      WHEN name LIKE '%mon' THEN 'Digimon'
+         Else 'Pokemon'
+         END;
+
+INSERT INTO owners(owner_id) 
+VALUES
+('Agumon'),
+('Gabumon and Pikachu'),
+('Devimon and Plantmon'),
+('Charmander, Squirtle, and Blossom'),
+('Angemon and Boarmon');
+
+UPDATE owners SET owner_id = 'Agumon' WHERE id = 1;
+UPDATE owners SET owner_id = 'Gabumon and Pikachu' WHERE id = 2;
+UPDATE owners SET owner_id = 'Devimon and Plantmon' WHERE id = 3;
+UPDATE owners SET owner_id = 'Charmander, Squirtle, and Blossom' WHERE id = 4;
+UPDATE owners SET owner_id = 'Angemon and Boarmon' WHERE id = 5;
+UPDATE owners SET owner_id = NULL WHERE id = 6;
