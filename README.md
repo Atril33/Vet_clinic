@@ -54,7 +54,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 Vet Clinic <a name="about-project"></a>
 
-> Vet Clinic is a Animals database.
+> Vet Clinic is an Animals database.
 
 ## 🛠 Built With <a name="built-with"></a>
 
