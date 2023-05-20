@@ -52,8 +52,11 @@ SELECT owners.full_name, COUNT(owners.age) AS total_animals FROM owners JOIN ani
 
 /* Day 4. */
 
- SELECT animals.name AS Animal_names, vets.name AS Name, visits.date_of_visit AS Last_Visits FROM animals, vets, visits WHERE vets.name = 'William Tatcher' AND vets.id = visits.animals_id ORDER BY visits.date_of_visit DESC
-LIMIT 1;
+SELECT animals.name, vets.name, visits.visited_date FROM animals
+  JOIN visits on animals.id = visits.animal_id
+  JOIN vets on visits.vet_id = vets.id
+  WHERE vets.name = 'William Tatcher'
+  ORDER BY visits.visited_date DESC lIMIT 1;
 
 SELECT vets.name AS Name, COUNT(distinct visits.animals_id) AS Total_view
 FROM visits, vets
