@@ -78,6 +78,17 @@ INSERT INTO vets (name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64,
 INSERT INTO vets (name, age, date_of_graduation) VALUES ('Jack Harkness', 38, '2008-06-08');
 
 
+INSERT INTO specialties (vet_name, specialization)
+VALUES ('Vet William Tatcher', 'Pokemon');
+
+INSERT INTO specialties (vet_name, specialization)
+VALUES ('Vet Stephanie Mendez', 'Digimon');
+
+INSERT INTO specialties (vet_name, specialization)
+VALUES ('Vet Stephanie Mendez', 'Pokemon');
+
+INSERT INTO specialties (vet_name, specialization)
+VALUES ('Vet Jack Harkness', 'Digimon');
 
 
 INSERT INTO visits (vet_id_vets, animals_id, date_of_visit)
