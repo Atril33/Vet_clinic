@@ -62,3 +62,57 @@ VALUES
    UPDATE animals
    SET owner_id = (SELECT id from owners WHERE full_name = 'Dean Winchester')
    WHERE name = 'Angemon'  OR name = 'Boarmon';
+
+/* Day 4. */
+
+INSERT INTO vets (id, name, age, date_of_graduation) 
+   VALUES 
+  ('William Tatcher', 45, '2000-04-23'),
+  ('Maisy Smith', 26, '2019-01-17'),
+  ('Stephanie Mendez', 64, '1981-05-04'),
+  ('Jack Harkness', 38, '2008-06-08');
+
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('William Tatcher', 45, '2000-04-23');
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Maisy Smith', 26, '2019-01-17');
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64, '1981-05-04');
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Jack Harkness', 38, '2008-06-08');
+
+
+INSERT INTO specialties (vet_name, specialization)
+VALUES ('Vet William Tatcher', 'Pokemon');
+
+INSERT INTO specialties (vet_name, specialization)
+VALUES ('Vet Stephanie Mendez', 'Digimon');
+
+INSERT INTO specialties (vet_name, specialization)
+VALUES ('Vet Stephanie Mendez', 'Pokemon');
+
+INSERT INTO specialties (vet_name, specialization)
+VALUES ('Vet Jack Harkness', 'Digimon');
+
+
+INSERT INTO visits (vet_id_vets, animals_id, date_of_visit)
+OVERRIDING SYSTEM VALUE
+VALUES
+  (DEFAULT, 1, '2020-05-24'),
+  (DEFAULT, 3, '2020-07-22'),
+  (DEFAULT, 4, '2021-02-02'),
+  (DEFAULT, 2, '2020-01-05'),
+  (DEFAULT, 2, '2020-03-08'),
+  (DEFAULT, 2, '2020-05-14'),
+  (DEFAULT, 3, '2021-05-04'),
+  (DEFAULT, 4, '2021-02-24'),
+  (DEFAULT, 2, '2019-12-21'),
+  (DEFAULT, 1, '2020-08-10'),
+  (DEFAULT, 2, '2021-04-07'),
+  (DEFAULT, 3, '2019-09-29'),
+  (DEFAULT, 4, '2020-10-03'),
+  (DEFAULT, 4, '2020-11-04'),
+  (DEFAULT, 2, '2019-01-24'),
+  (DEFAULT, 2, '2019-05-15'),
+  (DEFAULT, 2, '2020-02-27'),
+  (DEFAULT, 2, '2020-08-03'),
+  (DEFAULT, 3, '2020-05-24'),
+  (DEFAULT, 1, '2021-01-11');
+
+ALTER TABLE specializations DISABLE TRIGGER ALL;
